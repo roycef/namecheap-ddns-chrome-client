@@ -1,0 +1,97 @@
+<!--
+  An option page for configuring notifications.
+
+  Copyright 2010 the Chromium Authors
+
+  Use of this source code is governed by a BSD-style license that can be found
+  in the "LICENSE" file.
+
+  Brian Kennish <bkennish@chromium.org>
+-->
+<!doctype html>
+<html>
+  <head>
+  <meta charset="utf-8">
+  <title>Namecheap Dynamic DNS Client Preferences</title>
+  <script src="jquery.min.js"></script>
+  <script src="options.js"></script>
+<style>
+  /* Clone the look and feel of "chrome://" pages. */
+  body {
+    margin: 10px;
+    font: 84% Arial, sans-serif
+  }
+
+  h1 { font-size: 156% }
+
+  h1 img {
+    margin: 1px 5px 0 1px;
+    vertical-align: middle
+  }
+
+  h2 {
+    border-top: 1px solid #9cc2ef;
+    background-color: #ebeff9;
+    padding: 3px 5px;
+    font-size: 100%
+  }
+  
+  h3
+  {
+	padding-top:10px;
+  }
+
+  p
+  {
+	clear:left;
+  }
+  
+  .label
+  {
+	width:150px;
+	float:left;
+	clear:left;
+  }
+
+  .field
+  {
+	width:150px;
+	float:left;
+  }
+</style>
+<h1>
+  <img src="icon48.png" alt="Toast">
+  Namecheap Dynamic DNS Client
+</h1>
+<h2>Options</h2>
+<form id="options">
+	<p>Before using this extension you must first <a href="http://www.namecheap.com/support/knowledgebase/article.aspx/595/11/how-to-enable-dynamic-dns-option-for-a-domain" target="_blank">enable Dynamic DNS</a> for your domain on Namecheap.</p>
+  <p>Remember to click the checkbox to enable it update automatically</p><br/>
+	<p>
+		<div class="label">Host:</div><div class="field"><input type="text" name="host" ></div>
+		<div class="label">Domain:</div><div class="field"><input type="text" name="domain"></div>
+		<div class="label">Password:</div><div class="field"><input type="text" name="password"></div>
+	</p>
+  <p>
+   <input type="checkbox" name="isActivated" checked>
+      Check for new IP address and update if new, every 
+      <select name="frequency">
+        <option>1</option>
+        <option>2</option>
+        <option>3</option>
+        <option>4</option>
+        <option>5</option>
+        <option>10</option>
+        <option>15</option>
+        <option>20</option>
+        <option>25</option>
+        <option>30</option>
+      </select>
+      minute(s).
+    </p>
+    <p>
+      <input type="checkbox" name="showNotifications" checked> Show notifications when IP is updated with namecheap
+    </p>
+</form>
+<br/><br/><br/><br/>
+<p>A pet project by <a href="http://roycefullerton.com" target="_blank">Royce Fullerton</a></p>
